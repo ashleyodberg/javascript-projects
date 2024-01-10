@@ -6,16 +6,52 @@ let computerStatusCode = 200;
 let shuttleSpeed = 15000;
 
 // 3) Write conditional expressions to satisfy the following safety rules:
-
+//Admittedly I really struggled to think about this part of the exercise - the logic behind using conditionals in practice isn't quite sticking, I dunno.
 // a) If crewStatus is true, print "Crew Ready" else print "Crew Not Ready".
-
+if (crewStatus) {
+   console.log("Crew Ready");
+} else {
+   console.log("Crew Not Ready");
+}
+//if 'crew status' = true, it means the crew is ready but if false, they are not ready to launch
 
 // b) If computerStatusCode is 200, print "Please stand by. Computer is rebooting." Else if computerStatusCode is 400, print "Success! Computer online." Else print "ALERT: Computer offline!"
+if (computerStatusCode === 200) {
+   console.log("Please stand by. Computer is rebooting.");
+} else if (computerStatusCode === 400) {
+   console.log("Success! Computer online.");
+} else {
+   console.log("ALERT: Computer offline!");
+}
 
+//this block of code checks the value of 'computerStatusCode' and proceeeds to respond based on whether its 200, 400, or a different value
 
 // c) If shuttleSpeed is > 17,500, print "ALERT: Escape velocity reached!" Else if shuttleSpeed is < 8000, print "ALERT: Cannot maintain orbit!" Else print "Stable speed".
+if (shuttleSpeed > 17500) {
+   console.log("ALERT: Escape velocity reached!");
+} else if (shuttleSpeed < 8000) {
+   console.log("ALERT: Cannot maintain orbit!");
+} else {
+   console.log("Stable speed");
+}
+//this code block checks shuttleSpeed's value and responds based on the speed provided
 
 
-// 4) PREDICT: Do the code blocks shown in the 'predict.txt' file produce the same result?
+// 4) PREDICT: Do the code blocks shown in the 'predict.txt' file produce the same result? YES they do
+let prediction = "yes";
+console.log(prediction);
 
-console.log(/* "Yes" or "No" */);
+/* first block of code to test:
+if (crewStatus && computerStatusCode === 200 && spaceSuitsOn) {
+   console.log("all systems go");
+} else {
+   console.log("WARNING. Not ready");
+}*/
+
+if (!crewStatus || computerStatusCode !== 200 || !spaceSuitsOn) {
+   console.log("WARNING. Not ready");
+} else {
+   console.log("all systems go");
+}
+
+//
