@@ -1,6 +1,6 @@
 // Run this sample code as-is and examine the output. 
-// Should the shuttle have launched? 
-// Did it?
+// Should the shuttle have launched? No, it should not have launched.
+// Did it? It did anyway despite the failsafes in place.
 // Do not worry about fixing the code yet, we will do that in the next series of exercises.
 
 let launchReady = false;
@@ -30,3 +30,5 @@ if (launchReady) {
 } else {
    console.log('Launch scrubbed.');
 }
+
+//Answered questions above!

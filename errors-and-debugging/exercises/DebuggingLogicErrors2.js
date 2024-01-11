@@ -3,7 +3,7 @@
 // Add console.log(launchReady) after this block, then run the program.
 
 //Given the fuelLevel value, should launchReady be true or false after the check?  Is the program behaving as expected?
-
+//The value for launchReady should indeed be false. The value assigned to fuelLevel is 17000, less than 20000, meaning the else block of code is executed. 
 let launchReady = false;
 let fuelLevel = 17000;
 // let crewStatus = true;
@@ -16,7 +16,7 @@ if (fuelLevel >= 20000) {
    console.log('WARNING: Insufficient fuel!');
    launchReady = false;
 }
-
+console.log(launchReady);
 // if (crewStatus && computerStatus === 'green'){
 //    console.log('Crew & computer cleared.');
 //    launchReady = true;
