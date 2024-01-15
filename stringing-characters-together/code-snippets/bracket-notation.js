@@ -60,3 +60,12 @@ console.log(school[1]);
 
 school[1].unshift("Holmes");
 console.log(school[1]);
+
+console.log(typeof console);
+
+
+let firstName = "Grace";
+let lastName = "Hopper";
+
+console.log(firstName, "has", firstName.length, "characters");
+console.log(lastName, "has", lastName.length, "characters");
