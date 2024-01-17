@@ -69,3 +69,64 @@ let lastName = "Hopper";
 
 console.log(firstName, "has", firstName.length, "characters");
 console.log(lastName, "has", lastName.length, "characters");
+
+let nonprofit = "Launchcode";
+nonprofit = "LaunchCode";
+
+console.log(nonprofit);
+//the above code block shows the example from the textbook in the String Immutability section in Ch 7, demonstrating that you can modify the value that the variable is storing, rather than modifying the string itself, resulting in the variable then 'pointing' to a new value, with the old value remaining unchanged.
+
+/*console.log(nonprofit.toLowerCase()); //this only changes the characters to lowercase for this console.log statement, rather than changing its value
+
+console.log(nonprofit);
+nonprofit[6] = "C";
+console.log(nonprofit);*/
+
+word = 'JavaScript';
+word.toUpperCase()
+console.log(word);
+
+console.log(word.slice(4).toUpperCase());
+//console.log(word);
+
+let language = "JavaScript";
+language.replace('J', 'Q');
+language.slice(0, 5);
+console.log(language);
+
+console.log(language.slice(1, 6));
+console.log(language);
+
+let org = " The LaunchCode Foundation ";
+let trimmed = org.trim();
+
+console.log(trimmed);
+
+//Playing with ASCII Codes:
+let codes = [76, 97, 117, 110, 99, 104, 67, 111, 100, 101];
+
+let characters = String.fromCharCode(codes[0]) + String.fromCharCode(codes[1])
+                + String.fromCharCode(codes[2]) + String.fromCharCode(codes[3])
+                + String.fromCharCode(codes[4]) + String.fromCharCode(codes[5])
+                + String.fromCharCode(codes[6]) + String.fromCharCode(codes[7])
+                + String.fromCharCode(codes[8]) + String.fromCharCode(codes[9]);
+
+console.log(characters);
+
+//Special Characters Practice
+
+console.log("A message\nbroken across lines,\n\tand indented");
+
+//playing with \uXXXX format for using unicode characters https://unicode-table.com/en/
+console.log("The interrobang character, \u203d, combines ? and !");
+
+console.log("\"The dog's favorite toy is a stuffed hedgehog,\" said Chris");
+
+//concatenation to combine strings and variables for a specific output:
+let name = "Jack";
+let currentAge = 9;
+
+console.log("Next year, " + name + " will be " + (currentAge + 1) + ".");
+
+console.log(`Next year, ${name} will be ${currentAge + 1}.`);
+
