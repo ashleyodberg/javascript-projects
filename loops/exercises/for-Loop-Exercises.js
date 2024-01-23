@@ -1,15 +1,17 @@
 /*Exercise #1: Construct for loops that accomplish the following tasks:
     a. Print the numbers 0 - 20, one number per line.*/
-    for (let i = 0; i <= 20; i++) {
-    console.log(i);
+for (let i = 0; i <= 20; i++) { //the for loop is first initialized with i = 0, and is slated to continue iterating as long as i is less than or equal to 20, with i incremented each iteration
+      
+    console.log(i); //prints the value of i for each iteration over the loop
     }
 //b. Print only the ODD values from 3 - 29, one number per line.
-for (let i = 3; i <= 29; i += 2) {
-  console.log(i);
+for (let i = 3; i <= 29; i += 2) { //the for loop here is initialized with i set to 3 and iterates as long as i is less than or equal to 29, with i incremented by 2 each iteration through
+  console.log(i); //prints the value of i in each iteration, only printing odd numbers since i starts at an odd number - 3 - and is incremented by 2, keeping it odd - prints one per line 
 }
+
 //c. Print the EVEN numbers 12 to -14 in descending order, one number per line.
-for (let i = 12; i >= -14; i -= 2) {
-  console.log(i)
+for (let i = 12; i >= -14; i -= 2) { //loop is initialized with i set to 12 and iterates as long as i remains greater than or equal to -14, with i decrementing by 2 each time
+  console.log(i)//prints i each iteration, only even are printed bc i starts as a positive and is incremented by 2, remaining positive throughout the codeblock
 }
     //d. Challenge - Print the numbers 50 - 20 in descending order, but only if the numbers are multiples of 3. (Your code should work even if you replace 50 or 20 with other numbers). */
 
