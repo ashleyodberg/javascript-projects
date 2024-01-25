@@ -8,3 +8,16 @@ printMessage();
 message = "Goodbye";
 printMessage();
 
+/*function sayHello() {
+   console.log("Hello, World!");
+}
+
+sayHello();*/
+
+let num = 42;
+
+function isEven (num) { 
+    return num % 2 === 0; 
+}
+
+console.log(isEven(43));
