@@ -9,6 +9,28 @@
 // 5. Use console.log(reverseCharacters(myVariableName)); to call the function and verify that it correctly reverses the characters in the string.
 // 6. Optional: Use method chaining to reduce the lines of code within the function.
 
+function reverseCharacters(stringToReverse) {
+    //Step  1: split string into array of characters
+    let charArray = stringToReverse.split('');
+    //Step 2: reverse the order of array elements
+    let reversedArray = charArray.reverse();
+    //Step 3: Join the elements back into a string
+    let reversedString = reversedArray.join('');
+    //Step 4: return the reversed string
+    return reversedString;
+}
+
+let variableName = 'example';
+console.log(reverseCharacters(variableName));
+
+//Part 1, Steps 1-6 but with method chaining instead to simplify the lines of code:
+
+/*function reverseCharacters(str) {
+    return stringToReverse.split('').reverse().join('');
+}
+console.log(reverseCharacters('example));
+*/
+
 // Part Two: Reverse Digits
 
 // 1. Add an if statement to reverseCharacters to check the typeof the parameter.
@@ -18,6 +40,22 @@
 // 5. Be sure to print the result returned by the function to verify that your code works for both strings and numbers. Do this before moving on to the next exercise.
 
 // Part Three: Complete Reversal
+let arrayTest1 = ['apple', 'potato', 'Capitalized Words'];
+let arrayTest2 = [123, 8897, 42, 1168, 8675309];
+let arrayTest3 = ['hello', 'world', 123, 'orange'];
+
+function doubleReverse(originalArray) {
+    let oldArray = [];
+
+    for (i = 0; i < originalArray.length; i++) {
+        oldArray.push(reverseCharacters(originalArray[i]));
+   
+    } return oldArray.reverse();
+}
+console.log(doubleReverse(arrayTest1));
+
+
+
 
 // 1. Define and initialize an empty array.
 // 2. Loop through the old array.
@@ -25,10 +63,6 @@
 // 4. Add the reversed string (or number) to the array defined in part ‘a’.
 // 5. Return the final, reversed array.
 // 6. Be sure to print the results from each test case in order to verify your code.
-
-let arrayTest1 = ['apple', 'potato', 'Capitalized Words'];
-let arrayTest2 = [123, 8897, 42, 1168, 8675309];
-let arrayTest3 = ['hello', 'world', 123, 'orange'];
 
 // Bonus Missions
 
