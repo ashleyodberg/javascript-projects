@@ -3,3 +3,5 @@ function printMessage() {
 }
 
 setTimeout(printMessage, 5000);
+
+//Message prints with a five second delay since 5 seconds is 5000 milliseconds, we can do it as shown above (per the textbook)
