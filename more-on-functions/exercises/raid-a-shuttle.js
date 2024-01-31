@@ -63,17 +63,29 @@ console.log("Hold status: " + holdStatus(cargoHold));
 
 // Next, liberate some of that glorious cargo.
  
-
+//this following function takes two itemsf rom our cargo hold, puts them in a new array, and returns the new array storing our stolen items
 //a). Define another anonymous function with an array as a parameter, and set it equal to another innocent variable.
-
+/*let innocentFunction = function (cargoArray) {
+  let stolenItems = [cargoArray[1]];
+  return stolenItems;
+};*/
 //b). You need to swipe two items from the cargo hold. Choose well. Stealing water ain’t gonna get us rich. Put the swag into a new array and return it from the function.
 
 //c). The cargo hold has better security than the fuel tanks. It counts how many things are in storage. You need to replace what you steal with something worthless. The count MUST stay the same, or you’ll get caught and thrown into the LaunchCode brig.
+let innocentFunction = function (cargoArray) {
+  let stolenItems = [cargoArray[0], cargoArray[1]];
 
+  cargoArray[0] = "worthless item";
+  cargoArray[1] = "worthless item";
+
+  return cargoArray;
+}
 //d). Don’t get hasty, matey! Remember to test your function.
 
 // Finally, you need to print a receipt for the accountant. Don’t laugh! That genius knows MATH and saves us more gold than you can imagine.
- 
+let receipt = `Raided ${stolenFuelLevel} kg of fuel from the tanks, and stole ${stolenCargoItems[0]} and {stolenCargoItems[2]} from the cargo hold.`;
+console.log(receipt);
+
  
 //a). Define a function called irs that can take fuelLevel and cargoHold as arguments.
 	
@@ -81,3 +93,21 @@ console.log("Hold status: " + holdStatus(cargoHold));
 
 //c). Use a template literal to return, "Raided _____ kg of fuel from the tanks, and stole ____ and ____ from the cargo hold."
 
+let irs = function (fuelLevel, cargoHold) {
+  let stolenFuelLevel, stolenCargoItems;
+  let fuelStealResult = stealAndReplace([fuelLevel], [0], 0);
+  stolenFuelLevel = fuelStealResult.stolenItems[0];
+  fuelLevel = fuelStealResult.newArray[0];
+
+  let cargoStealResult = stealAndReplace(cargoHold, [0, 1], 'worthless item');
+  stolenCargoItems = cargoStealResult.stolenItems;
+  cargoHold = cargoStealResult.newArray;
+
+  return { stolenFuelLevel, stolenCargoItems, fuelLevel, cargoHold };
+};
+
+let irsResult = irs(fuelLevel, cargoHold);
+let { stolenFuelLevel, stolenCargoItems, fuelLevelAfterTheft, cargoHoldAfterTheft } = irsResult;
+let receipt = `Raided ${stolenFuelLevel} kg of fuel from the tanks, and stole ${stolenCargoItems[0]} and ${stolenCargoItems[1]} from the cargo hold.`;
+
+console.log(receipt);
